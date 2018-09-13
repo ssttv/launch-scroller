@@ -7,14 +7,14 @@ const SCREEN_HEIGHT = Dimensions.get("window").height;
 export default class Scroller extends Component {
   render() {
     return (
-      <ScrollView horizontal style={styles.container}>
-        <View style={styles.page}>
+      <ScrollView horizontal pagingEnabled style={styles.container}>
+        <View style=[{styles.page}, {styles.red}]>
           <Text style={styles.content}> Welcome to the infamous scrollable tabs </Text>
         </View> 
-        <View style={styles.page}>
+        <View style=[{styles.page}, {styles.green}]>
           <Text style={styles.content}> We've got the best tabs on the block, and they are scrollable </Text>
         </View>
-        <View style={styles.page}>
+        <View style=[{styles.page}, {styles.blue}]>
           <Text style={styles.content}> How cool is that? </Text>
         </View> 
       </ScrollView>
@@ -25,7 +25,6 @@ export default class Scroller extends Component {
 const styles = StyleSheet.create({
   container: {},
   page: {
-    backgroundColor: "#007bb6",
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
@@ -36,5 +35,15 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     color: "#FFF"
+  },
+  red: {
+    backgroundColor: "#dd4b39"
+  },
+  green: {
+    backgroundColor: "#27ae68"
+  },
+  blue: {
+    backgroundColor: "#007bb6",
   }
+  
 });
