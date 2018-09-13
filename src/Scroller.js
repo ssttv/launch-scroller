@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, ScrollView } from "react-native";
 
 export default class Scroller extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Text> textInComponent </Text>
-      </View>
+      </ScrollView>
     );
   }
 }
