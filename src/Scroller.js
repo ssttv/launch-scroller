@@ -7,10 +7,16 @@ const SCREEN_HEIGHT = Dimensions.get("window").height;
 export default class Scroller extends Component {
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView horizontal style={styles.container}>
         <View style={styles.page}>
-          <Text style={styles.content}> textInComponent </Text>
+          <Text style={styles.content}> Welcome to the infamous scrollable tabs </Text>
+        </View> 
+        <View style={styles.page}>
+          <Text style={styles.content}> We've got the best tabs on the block, and they are scrollable </Text>
         </View>
+        <View style={styles.page}>
+          <Text style={styles.content}> How cool is that? </Text>
+        </View> 
       </ScrollView>
     );
   }
